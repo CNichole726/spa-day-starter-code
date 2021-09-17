@@ -1,0 +1,16 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p th:if = "${error}">Passwords must match</p>
+    <form method="post" th:action="@{/user}">
+        <input type="text" name="username" th:value="${username}">
+        <input type="email" name="email" th:value="${email}">
+        <input type="password" name="password">
+        <input type="password" name="verify">
+        <input type="submit">
+    </form>
+</body>
+</html>
